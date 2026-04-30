@@ -54,6 +54,57 @@ export const HeroSection = () => {
             que precisam de decisão correta, margem saudável e organização real.
           </p>
 
+          {/* VSL — Video Sales Letter */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.3, duration: 0.7 }}
+            className="max-w-3xl mx-auto mb-10"
+          >
+            <div className="relative rounded-2xl overflow-hidden border-2 border-primary/40 shadow-[0_0_60px_rgba(245,158,11,0.25)] bg-card">
+              <div className="relative aspect-video w-full">
+                {playVideo ? (
+                  <iframe
+                    src={`https://www.youtube.com/embed/${VSL_VIDEO_ID}?autoplay=1&rel=0`}
+                    title="Apresentação do Curso — Códigos do Transporte Lucrativo"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    className="absolute inset-0 w-full h-full"
+                  />
+                ) : (
+                  <button
+                    type="button"
+                    onClick={() => setPlayVideo(true)}
+                    className="group absolute inset-0 w-full h-full cursor-pointer"
+                    aria-label="Reproduzir vídeo de apresentação"
+                  >
+                    <img
+                      src={vslThumb}
+                      alt="Apresentação do Curso — O começo da sua virada no transporte"
+                      className="absolute inset-0 w-full h-full object-cover"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-background/10 to-transparent" />
+                    <img
+                      src={logoCtl}
+                      alt="Códigos do Transporte Lucrativo"
+                      className="absolute top-4 left-4 h-12 md:h-16 w-auto drop-shadow-2xl"
+                    />
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <div className="w-20 h-20 md:w-24 md:h-24 rounded-full bg-primary/95 flex items-center justify-center shadow-2xl group-hover:scale-110 transition-transform duration-300 ring-4 ring-primary/30">
+                        <Play className="w-10 h-10 md:w-12 md:h-12 text-primary-foreground fill-primary-foreground ml-1" />
+                      </div>
+                    </div>
+                    <div className="absolute bottom-4 left-1/2 -translate-x-1/2 px-4 py-2 rounded-full bg-background/80 backdrop-blur-sm border border-primary/30">
+                      <span className="text-xs md:text-sm font-bold text-foreground uppercase tracking-wider">
+                        ▶ Assista a apresentação do curso
+                      </span>
+                    </div>
+                  </button>
+                )}
+              </div>
+            </div>
+          </motion.div>
+
           {/* CTA Buttons */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
