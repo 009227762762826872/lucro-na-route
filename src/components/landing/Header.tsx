@@ -66,7 +66,13 @@ export const Header = () => {
           {/* CTA Button */}
           <div className="hidden md:block">
             <Button variant="hero" size="default" asChild>
-              <a href="#planos">Escolher Plano</a>
+              <a
+                href="https://codigosdostransporteslucrativos1776911675993.carrinho.app/one-checkout/ocmdf/35665377"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Quero o Curso Completo
+              </a>
             </Button>
           </div>
 
@@ -105,8 +111,13 @@ export const Header = () => {
               </a>
             ))}
             <Button variant="hero" size="default" asChild className="mt-2">
-              <a href="#planos" onClick={() => setIsMobileMenuOpen(false)}>
-                Escolher Plano
+              <a
+                href="https://codigosdostransporteslucrativos1776911675993.carrinho.app/one-checkout/ocmdf/35665377"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Quero o Curso Completo
               </a>
             </Button>
           </nav>

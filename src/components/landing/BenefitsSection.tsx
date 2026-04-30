@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Video, Wrench, Truck, Shield, Award } from "lucide-react";
+import { Video, Wrench, Truck, Shield, Award, Mail, Calendar, Users } from "lucide-react";
 import benefitsImage from "@/assets/benefits-image.jpg";
 
 const courseContent = [
@@ -7,6 +7,39 @@ const courseContent = [
   { icon: Truck, title: "Foco em transportadoras", description: "Operacional, comercial e administrativo" },
   { icon: Award, title: "+26 anos de prática", description: "Experiência real de Ederson e Dion" },
   { icon: Wrench, title: "Ferramentas práticas", description: "Cada módulo inclui materiais e ferramentas específicas para aplicar no dia a dia" },
+];
+
+const deliverables = [
+  {
+    icon: Mail,
+    badge: "📦 Acesso",
+    title: "Como funciona o acesso",
+    items: [
+      "Acesso enviado automaticamente após a compra",
+      "Recebido no e-mail cadastrado no checkout",
+      "Login na área de membros com todo o conteúdo",
+    ],
+  },
+  {
+    icon: Calendar,
+    badge: "🎓 Aulas ao vivo",
+    title: "Aulas mensais (Plano Elite)",
+    items: [
+      "1 aula ao vivo por mês, em grupo",
+      "Exclusivas para alunos do Plano Elite",
+      "Espaço aberto para perguntas e casos reais",
+    ],
+  },
+  {
+    icon: Users,
+    badge: "🤝 Comunidade",
+    title: "Grupo, chat e suporte",
+    items: [
+      "Acesso a grupo e chat com a turma",
+      "Networking entre transportadores",
+      "Suporte contínuo com análise caso a caso",
+    ],
+  },
 ];
 
 export const BenefitsSection = () => {
@@ -69,6 +102,52 @@ export const BenefitsSection = () => {
           </div>
         </motion.div>
 
+        {/* Deliverables — access, live classes, community */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="max-w-5xl mx-auto mt-16"
+        >
+          <h3 className="font-display text-2xl md:text-3xl font-bold text-center mb-3">
+            Como você <span className="text-gradient">recebe e evolui</span>
+          </h3>
+          <p className="text-muted-foreground text-center max-w-2xl mx-auto mb-10">
+            Um caminho estruturado, com entregáveis claros e um ambiente real de crescimento.
+          </p>
+
+          <div className="grid md:grid-cols-3 gap-6">
+            {deliverables.map((block, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1, duration: 0.5 }}
+                className="p-6 rounded-2xl card-gradient border border-border hover:border-primary/30 transition-all flex flex-col"
+              >
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
+                    <block.icon className="w-6 h-6 text-primary" />
+                  </div>
+                  <span className="text-xs font-bold uppercase tracking-wider text-primary">
+                    {block.badge}
+                  </span>
+                </div>
+                <h4 className="font-display text-lg font-bold mb-3">{block.title}</h4>
+                <ul className="space-y-2">
+                  {block.items.map((item, i) => (
+                    <li key={i} className="flex items-start gap-2 text-sm text-muted-foreground">
+                      <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
 
         {/* Guarantee */}
         <motion.div
