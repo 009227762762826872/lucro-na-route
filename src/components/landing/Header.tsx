@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Truck, TrendingUp } from "lucide-react";
+import { Menu, X } from "lucide-react";
+import logoCtl from "@/assets/logo-ctl.png";
 
 const navLinks = [
   { label: "Problema", href: "#problema" },
@@ -34,19 +35,13 @@ export const Header = () => {
       <div className="container px-6">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
-          <a href="#" className="flex items-center gap-3 group">
-            <div className="relative w-10 h-10 md:w-12 md:h-12 rounded-xl bg-gradient-to-br from-primary to-amber-600 flex items-center justify-center shadow-lg group-hover:shadow-primary/30 transition-shadow">
-              <Truck className="w-5 h-5 md:w-6 md:h-6 text-primary-foreground" />
-              <TrendingUp className="absolute -top-1 -right-1 w-4 h-4 text-primary bg-background rounded-full p-0.5" />
-            </div>
-            <div className="hidden sm:block">
-              <span className="font-display font-bold text-sm md:text-base leading-tight block">
-                Códigos do
-              </span>
-              <span className="font-display font-bold text-sm md:text-base text-gradient leading-tight">
-                Transporte Lucrativo
-              </span>
-            </div>
+          <a href="#" className="flex items-center gap-3 group" aria-label="Códigos do Transporte Lucrativo">
+            <img
+              src={logoCtl}
+              alt="Códigos do Transporte Lucrativo"
+              className="h-12 md:h-14 w-auto object-contain drop-shadow-lg"
+              loading="eager"
+            />
           </a>
 
           {/* Desktop Navigation */}

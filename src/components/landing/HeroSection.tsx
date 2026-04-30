@@ -1,7 +1,12 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { TrendingUp, Target, Shield } from "lucide-react";
+import { TrendingUp, Target, Shield, Play } from "lucide-react";
 import heroTruck from "@/assets/hero-truck.jpg";
+import vslThumb from "@/assets/vsl-thumb.jpg";
+import logoCtl from "@/assets/logo-ctl.png";
+
+const VSL_VIDEO_ID = "TEelxVjX4CM";
 
 export const HeroSection = () => {
   return (
