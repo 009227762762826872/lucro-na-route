@@ -56,8 +56,12 @@ export const CTASection = () => {
           </div>
 
           <Button variant="hero" size="xl" asChild className="group">
-            <a href="#planos">
-              Escolher Meu Plano Agora
+            <a
+              href="https://codigosdostransporteslucrativos1776911675993.carrinho.app/one-checkout/ocmdf/35665377"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Quero o Curso Completo
               <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
             </a>
           </Button>

@@ -55,7 +55,13 @@ export const HeroSection = () => {
             className="flex flex-col sm:flex-row gap-4 justify-center mb-16"
           >
             <Button variant="hero" size="xl" asChild>
-              <a href="#planos">Escolher Meu Plano</a>
+              <a
+                href="https://codigosdostransporteslucrativos1776911675993.carrinho.app/one-checkout/ocmdf/35665377"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Quero o Curso Completo
+              </a>
             </Button>
             <Button variant="heroOutline" size="xl" asChild>
               <a href="#problema">Entender o Método</a>
