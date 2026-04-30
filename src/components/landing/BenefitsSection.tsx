@@ -12,12 +12,12 @@ const courseContent = [
 const deliverables = [
   {
     icon: Mail,
-    badge: "📦 Acesso",
-    title: "Como funciona o acesso",
+    badge: "📦 Acesso via Mindz",
+    title: "Acesso automático por e-mail",
     items: [
-      "Acesso enviado automaticamente após a compra",
-      "Recebido no e-mail cadastrado no checkout",
-      "Login na área de membros com todo o conteúdo",
+      "Login e senha enviados automaticamente após a confirmação do pagamento",
+      "E-mail enviado para o endereço cadastrado no checkout",
+      "Plataforma Mindz: área de membros profissional e estável",
     ],
   },
   {
