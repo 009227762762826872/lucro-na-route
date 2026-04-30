@@ -9,6 +9,8 @@ import logoCtl from "@/assets/logo-ctl.png";
 const VSL_VIDEO_ID = "TEelxVjX4CM";
 
 export const HeroSection = () => {
+  const [playVideo, setPlayVideo] = useState(false);
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 pb-32">
       {/* Background image */}
