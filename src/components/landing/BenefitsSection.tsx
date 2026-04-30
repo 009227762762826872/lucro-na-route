@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Video, Wrench, Truck, Shield, Award } from "lucide-react";
+import { Video, Wrench, Truck, Shield, Award, Mail, Calendar, Users } from "lucide-react";
 import benefitsImage from "@/assets/benefits-image.jpg";
 
 const courseContent = [
@@ -7,6 +7,39 @@ const courseContent = [
   { icon: Truck, title: "Foco em transportadoras", description: "Operacional, comercial e administrativo" },
   { icon: Award, title: "+26 anos de prática", description: "Experiência real de Ederson e Dion" },
   { icon: Wrench, title: "Ferramentas práticas", description: "Cada módulo inclui materiais e ferramentas específicas para aplicar no dia a dia" },
+];
+
+const deliverables = [
+  {
+    icon: Mail,
+    badge: "📦 Acesso",
+    title: "Como funciona o acesso",
+    items: [
+      "Acesso enviado automaticamente após a compra",
+      "Recebido no e-mail cadastrado no checkout",
+      "Login na área de membros com todo o conteúdo",
+    ],
+  },
+  {
+    icon: Calendar,
+    badge: "🎓 Aulas ao vivo",
+    title: "Aulas mensais (Plano Elite)",
+    items: [
+      "1 aula ao vivo por mês, em grupo",
+      "Exclusivas para alunos do Plano Elite",
+      "Espaço aberto para perguntas e casos reais",
+    ],
+  },
+  {
+    icon: Users,
+    badge: "🤝 Comunidade",
+    title: "Grupo, chat e suporte",
+    items: [
+      "Acesso a grupo e chat com a turma",
+      "Networking entre transportadores",
+      "Suporte contínuo com análise caso a caso",
+    ],
+  },
 ];
 
 export const BenefitsSection = () => {
