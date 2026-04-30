@@ -1,0 +1,176 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Sora:wght@400;500;600;700;800&display=swap');
+
+@layer base {
+  :root {
+    --background: 222 47% 6%;
+    --foreground: 210 40% 98%;
+
+    --card: 222 47% 9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222 47% 9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 38 92% 50%;
+    --primary-foreground: 222 47% 6%;
+
+    --secondary: 222 30% 14%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 222 30% 18%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 38 92% 50%;
+    --accent-foreground: 222 47% 6%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 222 30% 18%;
+    --input: 222 30% 18%;
+    --ring: 38 92% 50%;
+
+    --radius: 0.75rem;
+
+    /* Custom tokens */
+    --amber-glow: 38 100% 60%;
+    --amber-dark: 38 80% 40%;
+    --navy-deep: 222 47% 4%;
+    --navy-light: 222 30% 22%;
+    --success: 142 76% 36%;
+    --success-foreground: 210 40% 98%;
+
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(38 92% 50%) 0%, hsl(25 95% 53%) 100%);
+    --gradient-card: linear-gradient(180deg, hsl(222 47% 11%) 0%, hsl(222 47% 8%) 100%);
+    --gradient-featured: linear-gradient(135deg, hsl(38 92% 50% / 0.15) 0%, hsl(38 92% 50% / 0.05) 100%);
+    
+    /* Shadows */
+    --shadow-glow: 0 0 60px -12px hsl(38 92% 50% / 0.4);
+    --shadow-card: 0 25px 50px -12px hsl(222 47% 3% / 0.8);
+    --shadow-button: 0 10px 40px -10px hsl(38 92% 50% / 0.5);
+
+    --sidebar-background: 222 47% 6%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: 38 92% 50%;
+    --sidebar-primary-foreground: 222 47% 6%;
+    --sidebar-accent: 222 30% 14%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 222 30% 18%;
+    --sidebar-ring: 38 92% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Sora', system-ui, sans-serif;
+  }
+}
+
+@layer components {
+  .text-gradient {
+    @apply bg-clip-text text-transparent;
+    background-image: var(--gradient-hero);
+  }
+
+  .card-gradient {
+    background: var(--gradient-card);
+  }
+
+  .featured-gradient {
+    background: var(--gradient-featured);
+  }
+
+  .glow-shadow {
+    box-shadow: var(--shadow-glow);
+  }
+
+  .card-shadow {
+    box-shadow: var(--shadow-card);
+  }
+
+  .button-shadow {
+    box-shadow: var(--shadow-button);
+  }
+
+  .glass-effect {
+    @apply backdrop-blur-xl;
+    background: hsl(222 47% 9% / 0.8);
+  }
+
+  .border-glow {
+    @apply border;
+    border-color: hsl(38 92% 50% / 0.3);
+  }
+}
+
+@layer utilities {
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .animate-pulse-slow {
+    animation: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+}
+
+/* Road/Highway Decorative Elements */
+@layer components {
+  .road-line-separator {
+    position: relative;
+  }
+  
+  .road-line-separator::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 4px;
+    height: 100%;
+    background: repeating-linear-gradient(
+      to bottom,
+      hsl(38 92% 50% / 0.3) 0px,
+      hsl(38 92% 50% / 0.3) 20px,
+      transparent 20px,
+      transparent 40px
+    );
+  }
+  
+  .asphalt-texture {
+    background-image: 
+      radial-gradient(circle at 20% 80%, hsl(222 47% 8% / 0.8) 0%, transparent 50%),
+      radial-gradient(circle at 80% 20%, hsl(222 47% 10% / 0.6) 0%, transparent 50%),
+      linear-gradient(180deg, hsl(222 47% 6%) 0%, hsl(222 47% 4%) 100%);
+  }
+  
+  .highway-glow {
+    background: linear-gradient(
+      90deg,
+      transparent 0%,
+      hsl(38 92% 50% / 0.1) 50%,
+      transparent 100%
+    );
+  }
+}
