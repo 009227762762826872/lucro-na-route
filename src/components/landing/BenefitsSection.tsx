@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Video, Wrench, Truck, Shield, Award, Mail, Calendar, Users } from "lucide-react";
+import { Video, Wrench, Truck, Shield, Award, Mail, Calendar, Users, CreditCard, Inbox, KeyRound, Zap } from "lucide-react";
 import benefitsImage from "@/assets/benefits-image.jpg";
 
 const courseContent = [
@@ -12,12 +12,12 @@ const courseContent = [
 const deliverables = [
   {
     icon: Mail,
-    badge: "📦 Acesso",
-    title: "Como funciona o acesso",
+    badge: "📦 Acesso via Mindz",
+    title: "Acesso automático por e-mail",
     items: [
-      "Acesso enviado automaticamente após a compra",
-      "Recebido no e-mail cadastrado no checkout",
-      "Login na área de membros com todo o conteúdo",
+      "Login e senha enviados automaticamente após a confirmação do pagamento",
+      "E-mail enviado para o endereço cadastrado no checkout",
+      "Plataforma Mindz: área de membros profissional e estável",
     ],
   },
   {
@@ -99,6 +99,79 @@ export const BenefitsSection = () => {
                 <p className="text-muted-foreground text-sm">{item.description}</p>
               </motion.div>
             ))}
+          </div>
+        </motion.div>
+
+        {/* Access flow — Mindz platform */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="max-w-5xl mx-auto mt-16"
+        >
+          <div className="rounded-3xl p-8 md:p-10 border-2 border-primary/40 bg-gradient-to-br from-primary/5 via-card to-background shadow-[0_0_60px_rgba(245,158,11,0.1)]">
+            <div className="text-center mb-8">
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/30 mb-4">
+                <Zap className="w-4 h-4 text-primary" />
+                <span className="text-xs font-bold text-primary uppercase tracking-wider">
+                  Processo simples, rápido e 100% automatizado
+                </span>
+              </div>
+              <h3 className="font-display text-2xl md:text-3xl font-bold mb-3">
+                Como você acessa o conteúdo <span className="text-gradient">após a compra</span>
+              </h3>
+              <p className="text-muted-foreground max-w-2xl mx-auto">
+                Tudo é feito automaticamente. Em poucos minutos após a confirmação do pagamento,
+                você recebe os dados de acesso à plataforma <span className="font-bold text-foreground">Mindz</span>{" "}
+                no e-mail cadastrado no checkout.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-6 mb-6">
+              {[
+                {
+                  icon: CreditCard,
+                  step: "1",
+                  title: "Você finaliza a compra",
+                  desc: "Cadastra seu e-mail no checkout e conclui o pagamento.",
+                },
+                {
+                  icon: Inbox,
+                  step: "2",
+                  title: "Recebe o e-mail automático",
+                  desc: "Login e senha de acesso à plataforma Mindz chegam diretamente no seu e-mail.",
+                },
+                {
+                  icon: KeyRound,
+                  step: "3",
+                  title: "Acessa imediatamente",
+                  desc: "Entra na área de membros e começa a estudar — sem burocracia, sem espera.",
+                },
+              ].map((s, i) => (
+                <div
+                  key={i}
+                  className="relative p-6 rounded-2xl bg-secondary/40 border border-border"
+                >
+                  <div className="absolute -top-3 -left-3 w-9 h-9 rounded-full bg-primary text-primary-foreground font-display font-bold flex items-center justify-center shadow-lg">
+                    {s.step}
+                  </div>
+                  <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
+                    <s.icon className="w-6 h-6 text-primary" />
+                  </div>
+                  <h4 className="font-display text-lg font-bold mb-2">{s.title}</h4>
+                  <p className="text-sm text-muted-foreground">{s.desc}</p>
+                </div>
+              ))}
+            </div>
+
+            <div className="flex items-center justify-center gap-2 text-sm text-muted-foreground bg-background/50 rounded-xl p-4 border border-border">
+              <Mail className="w-4 h-4 text-primary flex-shrink-0" />
+              <span>
+                <span className="font-semibold text-foreground">Importante:</span> use um e-mail
+                válido no checkout — é por ele que você receberá os dados de acesso à Mindz.
+              </span>
+            </div>
           </div>
         </motion.div>
 
