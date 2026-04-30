@@ -1,6 +1,9 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { Check, Gem, Wrench, Calculator, TrendingUp } from "lucide-react";
+import { Check, Gem, Wrench, Calculator, TrendingUp, Lock, Sparkles } from "lucide-react";
+
+const CHECKOUT_URL =
+  "https://codigosdostransporteslucrativos1776911675993.carrinho.app/one-checkout/ocmdf/35665377";
 
 interface Module {
   title: string;
@@ -13,7 +16,6 @@ interface Pillar {
   icon: React.ElementType;
   name: string;
   subtitle: string;
-  color: string;
   modules: Module[];
 }
 
@@ -22,12 +24,11 @@ const pillars: Pillar[] = [
     icon: Wrench,
     name: "PILAR 1 — OPERACIONAL",
     subtitle: "Onde se ganha ou se perde dinheiro",
-    color: "primary",
     modules: [
       {
         title: "Gestão de Terceiros",
-        price: "R$ 159",
-        link: "https://pagar.vindi.com.br/c3017d2f075a57b956297730c4aab831ce698d1b",
+        price: "R$ 159,90",
+        link: "https://codigosdostransporteslucrativos1776911675993.carrinho.app/one-checkout/ocmdf/35629452",
         features: [
           "Como contratar corretamente o terceiro",
           "Avaliação de perfil, documentação e histórico",
@@ -36,8 +37,8 @@ const pillars: Pillar[] = [
       },
       {
         title: "Escolha do Veículo Correto",
-        price: "R$ 247",
-        link: "https://pagar.vindi.com.br/9b03a84fe1a5b5d0aa128b3107367a6b92f4cdb3",
+        price: "R$ 159,90",
+        link: "https://codigosdostransporteslucrativos1776911675993.carrinho.app/one-checkout/ocmdf/35629461",
         features: [
           "Tipos de veículos e suas aplicações práticas",
           "Como evitar erro de cubagem ou excesso de custo",
@@ -46,8 +47,8 @@ const pillars: Pillar[] = [
       },
       {
         title: "Formação de Frete ao Terceiro",
-        price: "R$ 297",
-        link: "https://checkout.yapay.com.br/transacao/t87765de6ec4fb77a8f2c5fc80dd95a9a",
+        price: "R$ 159,90",
+        link: "https://codigosdostransporteslucrativos1776911675993.carrinho.app/one-checkout/ocmdf/35629531",
         features: [
           "Precificação correta para pagamento do terceiro",
           "Margem mínima saudável",
@@ -56,8 +57,8 @@ const pillars: Pillar[] = [
       },
       {
         title: "Planejamento de Viagem",
-        price: "R$ 159",
-        link: "https://checkout.yapay.com.br/transacao/t1524ac7bb901e2c96daf0cf0123f72c5",
+        price: "R$ 159,90",
+        link: "https://codigosdostransporteslucrativos1776911675993.carrinho.app/one-checkout/ocmdf/35664324",
         features: [
           "Roteirização inteligente",
           "Organização da carga sobre o veículo",
@@ -66,8 +67,8 @@ const pillars: Pillar[] = [
       },
       {
         title: "Acomodação da Carga",
-        price: "R$ 297",
-        link: "https://checkout.yapay.com.br/transacao/t4e610a58bcaacb7b822d3fc5b210eb0c",
+        price: "R$ 159,90",
+        link: "https://codigosdostransporteslucrativos1776911675993.carrinho.app/one-checkout/ocmdf/35664373",
         features: [
           "Técnicas básicas de amarração",
           "Tipos de carroceria para cargas específicas",
@@ -80,12 +81,11 @@ const pillars: Pillar[] = [
     icon: Calculator,
     name: "PILAR 2 — ADMINISTRATIVO E FINANCEIRO",
     subtitle: "Onde a maioria quebra",
-    color: "primary",
     modules: [
       {
         title: "Documentação e Conformidade",
-        price: "R$ 159",
-        link: "https://pagar.vindi.com.br/58636b5b9f5dc69b7833afb139f29a7e4722eed7",
+        price: "R$ 219,90",
+        link: "https://codigosdostransporteslucrativos1776911675993.carrinho.app/one-checkout/ocmdf/35664962",
         features: [
           "Emissão correta de CTRC",
           "Manifesto de carga",
@@ -95,8 +95,8 @@ const pillars: Pillar[] = [
       },
       {
         title: "Boas Práticas de Pagamento",
-        price: "R$ 247",
-        link: "https://pagar.vindi.com.br/28f51a9856b243db8931785ac975bf273b945b0c",
+        price: "R$ 219,90",
+        link: "https://codigosdostransporteslucrativos1776911675993.carrinho.app/one-checkout/ocmdf/35664971",
         features: [
           "Por que não usar carta frete ou cheque",
           "Como estruturar pagamentos seguros e rastreáveis",
@@ -104,8 +104,8 @@ const pillars: Pillar[] = [
       },
       {
         title: "Controle Financeiro",
-        price: "R$ 297",
-        link: "https://pagar.vindi.com.br/c6b0f5454da23eb1b423e6a2a26121fcdc4df0ab",
+        price: "R$ 219,90",
+        link: "https://codigosdostransporteslucrativos1776911675993.carrinho.app/one-checkout/ocmdf/35664984",
         features: [
           "Organização do fluxo de caixa operacional",
           "Separação entre dinheiro da empresa e pessoal",
@@ -114,8 +114,8 @@ const pillars: Pillar[] = [
       },
       {
         title: "Indicadores de Gestão",
-        price: "R$ 159",
-        link: "https://pagar.vindi.com.br/ae4c0165e0448a5c8b5085741ef3bff3e7c33862",
+        price: "R$ 219,90",
+        link: "https://codigosdostransporteslucrativos1776911675993.carrinho.app/one-checkout/ocmdf/35664988",
         features: [
           "Quais KPIs realmente importam numa transportadora",
           "Margem por viagem / Custo por km / Taxa de ociosidade",
@@ -123,8 +123,8 @@ const pillars: Pillar[] = [
       },
       {
         title: "Planejamento Estratégico",
-        price: "R$ 297",
-        link: "https://pagar.vindi.com.br/00a10b3edafafda097f855d36d5818e496f6f5c9",
+        price: "R$ 219,90",
+        link: "https://codigosdostransporteslucrativos1776911675993.carrinho.app/one-checkout/ocmdf/35665127",
         features: [
           "Tomada de decisão baseada em indicadores",
           "Construção de metas reais",
@@ -133,8 +133,8 @@ const pillars: Pillar[] = [
       },
       {
         title: "Gestão de Crises",
-        price: "R$ 159",
-        link: "https://pagar.vindi.com.br/86dd04f113f2185b3aba06e5b49ea3c378b5515b",
+        price: "R$ 219,90",
+        link: "https://codigosdostransporteslucrativos1776911675993.carrinho.app/one-checkout/ocmdf/35665123",
         features: [
           "Como sobreviver a períodos de baixa demanda",
           "Ajustes rápidos de custo",
@@ -143,69 +143,23 @@ const pillars: Pillar[] = [
       },
     ],
   },
-  {
-    icon: TrendingUp,
-    name: "PILAR 3 — COMERCIAL",
-    subtitle: "Onde nasce o crescimento",
-    color: "primary",
-    modules: [
-      {
-        title: "Mentalidade Comercial",
-        price: "R$ 159",
-        link: "https://pagar.vindi.com.br/4bc8638ad6f948f20fc5075bfe0954514e242720",
-        features: [
-          "Parar de esperar carga e começar a vender solução",
-          "Posicionamento como especialista, não como freteiro",
-        ],
-      },
-      {
-        title: "Prospecção e Abordagem",
-        price: "R$ 197",
-        link: "https://pagar.vindi.com.br/d647b5a59e686fbd1057b4baf086783cd08bedeb",
-        features: [
-          "Como abordar empresas corretamente",
-          "Estrutura básica de apresentação da transportadora",
-          "Identificação de decisores",
-        ],
-      },
-      {
-        title: "Follow-up e Relacionamento",
-        price: "R$ 247",
-        link: "https://pagar.vindi.com.br/b70d05b2d4f528f13344f860d4f39f264de88dd0",
-        features: [
-          "Rotina de acompanhamento",
-          "Construção de carteira ativa de clientes",
-        ],
-      },
-      {
-        title: "Precificação Comercial",
-        price: "R$ 297",
-        link: "https://pagar.vindi.com.br/330144f0eda41b109afc78244aab49b7f12b032e",
-        features: [
-          "Como vender valor, não só preço",
-          "Formação de propostas sustentáveis",
-        ],
-      },
-      {
-        title: "Estratégia no WhatsApp",
-        price: "R$ 247",
-        link: "https://pagar.vindi.com.br/59aa82b62d9c43201d8eaee23070c76fa4bc52ba",
-        features: [
-          "Abordagem profissional",
-          "Sequência de mensagens",
-          "Pós-venda e fidelização",
-        ],
-      },
-    ],
-  },
+];
+
+const pillar3Topics = [
+  "Mentalidade Comercial: parar de esperar carga e começar a vender solução",
+  "Prospecção e Abordagem: como abordar empresas e identificar decisores",
+  "Follow-up e Relacionamento: construção de carteira ativa de clientes",
+  "Precificação Comercial: vender valor, não só preço",
+  "Estratégia no WhatsApp: abordagem profissional, sequência e pós-venda",
 ];
 
 const eliteFeatures = [
   "Acesso completo aos 3 pilares + todos os módulos",
-  "6 meses de mentoria individual com Ederson e Dion",
-  "Acompanhamento personalizado da sua operação",
-  "Suporte direto com os sócios",
-  "Vagas limitadas",
+  "Bônus exclusivo: Pilar 3 — Comercial (conteúdo avançado, não vendido separadamente)",
+  "Aula ao vivo mensal em grupo, com abertura para perguntas",
+  "Acompanhamento via grupo e chat",
+  "Suporte com análise caso a caso",
+  "Comunidade ativa para networking entre alunos",
 ];
 
 export const PricingSection = () => {
@@ -223,10 +177,11 @@ export const PricingSection = () => {
           className="text-center mb-16"
         >
           <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
-            Escolha o <span className="text-gradient">plano ideal</span> para você
+            Escolha o <span className="text-gradient">caminho ideal</span> para a sua operação
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Comece pelo módulo que resolve seu maior gargalo hoje — ou vá direto ao topo com o Plano Elite
+            Comece pelo módulo que resolve seu maior gargalo hoje — ou avance direto para o
+            sistema completo com o Plano Elite.
           </p>
         </motion.div>
 
@@ -241,7 +196,7 @@ export const PricingSection = () => {
           <div className="relative rounded-3xl p-8 md:p-10 pt-14 border-2 border-amber-500/60 bg-gradient-to-br from-amber-950/30 via-card to-amber-900/20 shadow-[0_0_60px_rgba(245,158,11,0.15)]">
             <div className="absolute -top-5 left-1/2 -translate-x-1/2 z-10">
               <div className="px-5 py-2 rounded-xl bg-gradient-to-r from-amber-500 to-yellow-400 text-amber-950 text-xs font-black shadow-lg text-center leading-tight whitespace-nowrap">
-                💎 PARA QUEM QUER O MÁXIMO
+                💎 SISTEMA COMPLETO + COMUNIDADE
               </div>
             </div>
 
@@ -252,13 +207,19 @@ export const PricingSection = () => {
                     <Gem className="w-7 h-7 text-amber-400" />
                   </div>
                   <div>
-                    <h3 className="font-display text-2xl md:text-3xl font-bold text-amber-300">Plano Elite</h3>
-                    <p className="text-sm text-amber-400/70">Imersão Completa + Mentoria Individual</p>
+                    <h3 className="font-display text-2xl md:text-3xl font-bold text-amber-300">
+                      Plano Elite — Curso Completo
+                    </h3>
+                    <p className="text-sm text-amber-400/70">
+                      Sistema validado + ambiente de crescimento contínuo
+                    </p>
                   </div>
                 </div>
 
                 <p className="text-muted-foreground mb-6 max-w-xl">
-                  Acesso completo aos 3 pilares + todos os módulos + 6 meses de mentoria individual com Ederson e Dion + acompanhamento personalizado da operação + suporte direto com os sócios. Vagas limitadas.
+                  Você não está comprando apenas conteúdo. Está entrando em um sistema validado,
+                  um caminho estruturado do iniciante ao avançado, com aulas ao vivo,
+                  acompanhamento e uma comunidade ativa de transportadores.
                 </p>
 
                 <ul className="grid sm:grid-cols-2 gap-3">
@@ -274,25 +235,33 @@ export const PricingSection = () => {
               </div>
 
               <div className="lg:w-72 text-center flex flex-col items-center justify-center gap-4 p-6 rounded-2xl bg-amber-500/5 border border-amber-500/20">
-                <p className="text-sm text-amber-400/70 font-medium uppercase tracking-widest">Investimento</p>
-                <p className="text-4xl md:text-5xl font-black text-amber-300 leading-tight">R$ 26.900,00</p>
-                <p className="text-xs text-muted-foreground">Condições personalizadas mediante consulta</p>
+                <p className="text-sm text-amber-400/70 font-medium uppercase tracking-widest">
+                  Investimento
+                </p>
+                <p className="text-4xl md:text-5xl font-black text-amber-300 leading-tight">
+                  R$ 297,90
+                </p>
+                <p className="text-xs text-muted-foreground">
+                  Acesso imediato após a compra
+                </p>
                 <Button
                   size="lg"
                   asChild
                   className="w-full bg-gradient-to-r from-amber-500 to-yellow-400 text-amber-950 font-bold hover:from-amber-400 hover:to-yellow-300 border-0 shadow-lg"
                 >
-                  <a href="https://checkout.yapay.com.br/transacao/td1a49b767ba2f53435d4b9da51d364ba" target="_blank" rel="noopener noreferrer">
-                    Quero o Plano Elite
+                  <a href={CHECKOUT_URL} target="_blank" rel="noopener noreferrer">
+                    Quero o Curso Completo
                   </a>
                 </Button>
-                <p className="text-xs text-muted-foreground">Vagas limitadas • Atendimento exclusivo</p>
+                <p className="text-xs text-muted-foreground">
+                  Inclui o bônus exclusivo Pilar 3
+                </p>
               </div>
             </div>
           </div>
         </motion.div>
 
-        {/* PILLARS */}
+        {/* PILLARS 1 & 2 */}
         {pillars.map((pillar, pillarIndex) => (
           <div key={pillarIndex} className="mb-20">
             <motion.div
@@ -300,20 +269,20 @@ export const PricingSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
-              className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-8 p-6 rounded-2xl card-gradient border border-border"
+              className="flex flex-col items-center text-center gap-4 mb-8 p-6 rounded-2xl card-gradient border border-border"
             >
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-xl bg-primary/20 flex items-center justify-center">
-                  <pillar.icon className="w-6 h-6 text-primary" />
-                </div>
-                <div>
-                  <h3 className="font-display text-xl md:text-2xl font-bold text-foreground">{pillar.name}</h3>
-                  <p className="text-sm text-primary font-medium">{pillar.subtitle}</p>
-                </div>
+              <div className="w-12 h-12 rounded-xl bg-primary/20 flex items-center justify-center">
+                <pillar.icon className="w-6 h-6 text-primary" />
+              </div>
+              <div>
+                <h3 className="font-display text-xl md:text-2xl font-bold text-foreground">
+                  {pillar.name}
+                </h3>
+                <p className="text-sm text-primary font-medium">{pillar.subtitle}</p>
               </div>
             </motion.div>
 
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center">
               {pillar.modules.map((mod, modIndex) => (
                 <motion.div
                   key={modIndex}
@@ -321,12 +290,14 @@ export const PricingSection = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: modIndex * 0.05, duration: 0.4 }}
-                  className="rounded-2xl p-6 card-gradient border border-border hover:border-primary/30 transition-all duration-300 flex flex-col"
+                  className="w-full max-w-sm rounded-2xl p-6 card-gradient border border-border hover:border-primary/30 transition-all duration-300 flex flex-col text-center"
                 >
-                  <h4 className="font-display text-lg font-bold text-foreground mb-1">{mod.title}</h4>
+                  <h4 className="font-display text-lg font-bold text-foreground mb-1">
+                    {mod.title}
+                  </h4>
                   <p className="text-2xl font-bold text-gradient mb-4">{mod.price}</p>
 
-                  <ul className="space-y-2.5 mb-6 flex-1">
+                  <ul className="space-y-2.5 mb-6 flex-1 text-left">
                     {mod.features.map((feature, i) => (
                       <li key={i} className="flex items-start gap-2">
                         <Check className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
@@ -335,22 +306,85 @@ export const PricingSection = () => {
                     ))}
                   </ul>
 
-                  {mod.link ? (
-                    <Button variant="cta" className="w-full" asChild>
-                      <a href={mod.link} target="_blank" rel="noopener noreferrer">
-                        Comprar Módulo
-                      </a>
-                    </Button>
-                  ) : (
-                    <Button variant="cta" className="w-full">
+                  <Button variant="cta" className="w-full" asChild>
+                    <a href={mod.link} target="_blank" rel="noopener noreferrer">
                       Comprar Módulo
-                    </Button>
-                  )}
+                    </a>
+                  </Button>
                 </motion.div>
               ))}
             </div>
           </div>
         ))}
+
+        {/* PILLAR 3 — BONUS ONLY */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="max-w-4xl mx-auto"
+        >
+          <div className="relative rounded-3xl p-8 md:p-10 pt-14 border-2 border-amber-500/40 bg-gradient-to-br from-amber-950/20 via-card to-background">
+            <div className="absolute -top-5 left-1/2 -translate-x-1/2 z-10">
+              <div className="px-5 py-2 rounded-xl bg-gradient-to-r from-amber-500 to-yellow-400 text-amber-950 text-xs font-black shadow-lg flex items-center gap-2 whitespace-nowrap">
+                <Sparkles className="w-3.5 h-3.5" />
+                BÔNUS EXCLUSIVO DO PLANO ELITE
+              </div>
+            </div>
+
+            <div className="text-center mb-6">
+              <div className="inline-flex w-14 h-14 rounded-xl bg-amber-500/20 items-center justify-center mb-4">
+                <TrendingUp className="w-7 h-7 text-amber-400" />
+              </div>
+              <h3 className="font-display text-2xl md:text-3xl font-bold text-amber-300 mb-2">
+                PILAR 3 — COMERCIAL
+              </h3>
+              <p className="text-sm text-amber-400/80 font-medium mb-4">
+                Onde nasce o crescimento
+              </p>
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-amber-500/10 border border-amber-500/30">
+                <Lock className="w-4 h-4 text-amber-400" />
+                <span className="text-xs font-semibold text-amber-300 uppercase tracking-wider">
+                  Conteúdo avançado • Não vendido separadamente
+                </span>
+              </div>
+            </div>
+
+            <p className="text-muted-foreground text-center max-w-2xl mx-auto mb-6">
+              O Pilar 3 é a etapa avançada do método: a virada de chave que transforma o operador
+              em estrategista comercial. Por ser conteúdo de alto impacto, está disponível
+              <span className="text-foreground font-medium"> apenas como bônus exclusivo </span>
+              para alunos do Plano Elite.
+            </p>
+
+            <ul className="grid sm:grid-cols-2 gap-3 max-w-2xl mx-auto mb-8">
+              {pillar3Topics.map((topic, i) => (
+                <li key={i} className="flex items-start gap-3">
+                  <div className="flex-shrink-0 w-5 h-5 rounded-full bg-amber-500/20 flex items-center justify-center mt-0.5">
+                    <Check className="w-3 h-3 text-amber-400" />
+                  </div>
+                  <span className="text-sm text-foreground">{topic}</span>
+                </li>
+              ))}
+            </ul>
+
+            <div className="text-center">
+              <Button
+                size="lg"
+                asChild
+                className="bg-gradient-to-r from-amber-500 to-yellow-400 text-amber-950 font-bold hover:from-amber-400 hover:to-yellow-300 border-0 shadow-lg"
+              >
+                <a href={CHECKOUT_URL} target="_blank" rel="noopener noreferrer">
+                  Quero o Curso Completo
+                </a>
+              </Button>
+              <p className="text-xs text-muted-foreground mt-3">
+                Acesso ao Pilar 3 incluso no Plano Elite
+              </p>
+            </div>
+          </div>
+        </motion.div>
       </div>
     </section>
   );
