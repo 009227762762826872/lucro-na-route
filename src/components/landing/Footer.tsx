@@ -52,9 +52,9 @@ export const Footer = () => {
           <div className="space-y-4">
             <h4 className="font-display font-bold text-foreground">Contato</h4>
             <div className="flex flex-col gap-3">
-              <a href="mailto:contato@transportelucrativo.com.br" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors">
+              <a href="mailto:ederson@transage.com.br" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors">
                 <Mail className="w-4 h-4" />
-                contato@transportelucrativo.com.br
+                ederson@transage.com.br
               </a>
             </div>
           </div>
