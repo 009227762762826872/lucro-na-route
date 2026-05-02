@@ -1,147 +1,66 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { Check, Gem, Wrench, Calculator, TrendingUp, Lock, Sparkles } from "lucide-react";
+import {
+  Check,
+  Gem,
+  Truck,
+  Wallet,
+  TrendingUp,
+  Lock,
+  Sparkles,
+} from "lucide-react";
 
 const CHECKOUT_URL =
   "https://codigosdostransporteslucrativos1776911675993.carrinho.app/one-checkout/ocmdf/35665377";
 
-interface Module {
-  title: string;
-  price: string;
-  features: string[];
-  link?: string;
-}
-
-interface Pillar {
+interface PremiumModule {
+  badge: string;
   icon: React.ElementType;
-  name: string;
+  title: string;
   subtitle: string;
-  modules: Module[];
+  description: string;
+  bullets: string[];
+  price: string;
+  ctaLabel: string;
+  link: string;
 }
 
-const pillars: Pillar[] = [
+const premiumModules: PremiumModule[] = [
   {
-    icon: Wrench,
-    name: "PILAR 1 — OPERACIONAL",
-    subtitle: "Onde se ganha ou se perde dinheiro",
-    modules: [
-      {
-        title: "Gestão de Terceiros",
-        price: "R$ 159,90",
-        link: "https://codigosdostransporteslucrativos1776911675993.carrinho.app/one-checkout/ocmdf/35629452",
-        features: [
-          "Como contratar corretamente o terceiro",
-          "Avaliação de perfil, documentação e histórico",
-          "Definição de regras claras de operação",
-        ],
-      },
-      {
-        title: "Escolha do Veículo Correto",
-        price: "R$ 159,90",
-        link: "https://codigosdostransporteslucrativos1776911675993.carrinho.app/one-checkout/ocmdf/35629461",
-        features: [
-          "Tipos de veículos e suas aplicações práticas",
-          "Como evitar erro de cubagem ou excesso de custo",
-          "Compatibilidade entre carga, rota e carroceria",
-        ],
-      },
-      {
-        title: "Formação de Frete ao Terceiro",
-        price: "R$ 159,90",
-        link: "https://codigosdostransporteslucrativos1776911675993.carrinho.app/one-checkout/ocmdf/35629531",
-        features: [
-          "Precificação correta para pagamento do terceiro",
-          "Margem mínima saudável",
-          "Como calcular carga complemento sem matar o lucro",
-        ],
-      },
-      {
-        title: "Planejamento de Viagem",
-        price: "R$ 159,90",
-        link: "https://codigosdostransporteslucrativos1776911675993.carrinho.app/one-checkout/ocmdf/35664324",
-        features: [
-          "Roteirização inteligente",
-          "Organização da carga sobre o veículo",
-          "Redução de reentregas, devoluções e tempo parado",
-        ],
-      },
-      {
-        title: "Acomodação da Carga",
-        price: "R$ 159,90",
-        link: "https://codigosdostransporteslucrativos1776911675993.carrinho.app/one-checkout/ocmdf/35664373",
-        features: [
-          "Técnicas básicas de amarração",
-          "Tipos de carroceria para cargas específicas",
-          "Prevenção de avarias e sinistros",
-        ],
-      },
+    badge: "CONTEÚDO FUNDAMENTAL",
+    icon: Truck,
+    title: "MÓDULO 1 — BASE DA OPERAÇÃO LUCRATIVA",
+    subtitle: "Onde você para de perder dinheiro na operação",
+    description:
+      "O Módulo 1 é onde você estrutura sua operação da forma correta. Aqui você elimina erros operacionais que geram prejuízo e constrói uma base sólida para escalar com segurança.",
+    bullets: [
+      "Como contratar e validar terceiros corretamente",
+      "Escolha do veículo ideal para cada tipo de operação",
+      "Formação de frete sem comprometer sua margem",
+      "Planejamento de viagem eficiente",
+      "Organização e acomodação correta da carga",
     ],
+    price: "R$ 159,90",
+    ctaLabel: "Quero esse módulo",
+    link: "https://codigosdostransporteslucrativos1776911675993.carrinho.app/one-checkout/ocmdf/35722903",
   },
   {
-    icon: Calculator,
-    name: "PILAR 2 — ADMINISTRATIVO E FINANCEIRO",
-    subtitle: "Onde a maioria quebra",
-    modules: [
-      {
-        title: "Documentação e Conformidade",
-        price: "R$ 219,90",
-        link: "https://codigosdostransporteslucrativos1776911675993.carrinho.app/one-checkout/ocmdf/35664962",
-        features: [
-          "Emissão correta de CTRC",
-          "Manifesto de carga",
-          "Contratos de frete",
-          "CIOT — exigências da ANTT",
-        ],
-      },
-      {
-        title: "Boas Práticas de Pagamento",
-        price: "R$ 219,90",
-        link: "https://codigosdostransporteslucrativos1776911675993.carrinho.app/one-checkout/ocmdf/35664971",
-        features: [
-          "Por que não usar carta frete ou cheque",
-          "Como estruturar pagamentos seguros e rastreáveis",
-        ],
-      },
-      {
-        title: "Controle Financeiro",
-        price: "R$ 219,90",
-        link: "https://codigosdostransporteslucrativos1776911675993.carrinho.app/one-checkout/ocmdf/35664984",
-        features: [
-          "Organização do fluxo de caixa operacional",
-          "Separação entre dinheiro da empresa e pessoal",
-          "Reserva para manutenção, impostos e emergências",
-        ],
-      },
-      {
-        title: "Indicadores de Gestão",
-        price: "R$ 219,90",
-        link: "https://codigosdostransporteslucrativos1776911675993.carrinho.app/one-checkout/ocmdf/35664988",
-        features: [
-          "Quais KPIs realmente importam numa transportadora",
-          "Margem por viagem / Custo por km / Taxa de ociosidade",
-        ],
-      },
-      {
-        title: "Planejamento Estratégico",
-        price: "R$ 219,90",
-        link: "https://codigosdostransporteslucrativos1776911675993.carrinho.app/one-checkout/ocmdf/35665127",
-        features: [
-          "Tomada de decisão baseada em indicadores",
-          "Construção de metas reais",
-          "Passos para formar uma empresa sólida e consistente",
-        ],
-      },
-      {
-        title: "Gestão de Crises",
-        price: "R$ 219,90",
-        link: "https://codigosdostransporteslucrativos1776911675993.carrinho.app/one-checkout/ocmdf/35665123",
-        features: [
-          "Como sobreviver a períodos de baixa demanda",
-          "Ajustes rápidos de custo",
-          "Mentalidade de longo prazo",
-        ],
-      },
+    badge: "CONTROLE E LUCRO",
+    icon: Wallet,
+    title: "MÓDULO 2 — GESTÃO FINANCEIRA DA TRANSPORTADORA",
+    subtitle: "Onde a maioria das transportadoras quebra",
+    description:
+      "O Módulo 2 é responsável por colocar sua operação no controle financeiro. Aqui você entende números, margens e toma decisões que mantêm sua empresa viva e lucrativa.",
+    bullets: [
+      "Documentação e conformidade (CTRC, CIOT, contratos)",
+      "Estruturação de pagamentos seguros",
+      "Controle de fluxo de caixa operacional",
+      "Indicadores essenciais para transportadoras",
+      "Planejamento estratégico e gestão de crises",
     ],
+    price: "R$ 219,90",
+    ctaLabel: "Quero esse módulo",
+    link: "https://codigosdostransporteslucrativos1776911675993.carrinho.app/one-checkout/ocmdf/35722921",
   },
 ];
 
@@ -161,6 +80,76 @@ const eliteFeatures = [
   "Suporte com análise caso a caso",
   "Comunidade ativa para networking entre alunos",
 ];
+
+const PremiumModuleCard = ({
+  module,
+  index,
+}: {
+  module: PremiumModule;
+  index: number;
+}) => {
+  const Icon = module.icon;
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.6, delay: index * 0.1 }}
+      className="relative rounded-3xl p-8 md:p-10 pt-14 border-2 border-amber-500/40 bg-gradient-to-br from-amber-950/20 via-card to-background shadow-[0_0_50px_rgba(245,158,11,0.08)] hover:shadow-[0_0_70px_rgba(245,158,11,0.18)] hover:border-amber-500/60 transition-all duration-500 flex flex-col"
+    >
+      <div className="absolute -top-5 left-1/2 -translate-x-1/2 z-10">
+        <div className="px-5 py-2 rounded-xl bg-gradient-to-r from-amber-500 to-yellow-400 text-amber-950 text-xs font-black shadow-lg whitespace-nowrap">
+          {module.badge}
+        </div>
+      </div>
+
+      <div className="text-center mb-6">
+        <div className="inline-flex w-14 h-14 rounded-xl bg-amber-500/20 items-center justify-center mb-4">
+          <Icon className="w-7 h-7 text-amber-400" />
+        </div>
+        <h3 className="font-display text-xl md:text-2xl font-bold text-amber-300 mb-2 leading-tight">
+          {module.title}
+        </h3>
+        <p className="text-sm text-amber-400/80 font-medium">
+          {module.subtitle}
+        </p>
+      </div>
+
+      <p className="text-muted-foreground text-center max-w-xl mx-auto mb-6 text-sm md:text-base">
+        {module.description}
+      </p>
+
+      <ul className="space-y-3 max-w-xl mx-auto mb-8 w-full">
+        {module.bullets.map((bullet, i) => (
+          <li key={i} className="flex items-start gap-3">
+            <div className="flex-shrink-0 w-5 h-5 rounded-full bg-amber-500/20 flex items-center justify-center mt-0.5">
+              <Check className="w-3 h-3 text-amber-400" />
+            </div>
+            <span className="text-sm text-foreground">{bullet}</span>
+          </li>
+        ))}
+      </ul>
+
+      <div className="mt-auto text-center border-t border-amber-500/20 pt-6">
+        <p className="text-xs text-amber-400/70 font-medium uppercase tracking-widest mb-1">
+          Investimento
+        </p>
+        <p className="text-3xl md:text-4xl font-black text-amber-300 mb-5">
+          {module.price}
+        </p>
+        <Button
+          size="lg"
+          asChild
+          className="w-full sm:w-auto px-8 bg-gradient-to-r from-amber-500 to-yellow-400 text-amber-950 font-bold hover:from-amber-400 hover:to-yellow-300 border-0 shadow-lg"
+        >
+          <a href={module.link} target="_blank" rel="noopener noreferrer">
+            {module.ctaLabel}
+          </a>
+        </Button>
+      </div>
+    </motion.div>
+  );
+};
 
 export const PricingSection = () => {
   return (
@@ -185,7 +174,7 @@ export const PricingSection = () => {
           </p>
         </motion.div>
 
-        {/* ELITE PLAN */}
+        {/* ELITE PLAN — UPSELL TOPO */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -261,61 +250,32 @@ export const PricingSection = () => {
           </div>
         </motion.div>
 
-        {/* PILLARS 1 & 2 */}
-        {pillars.map((pillar, pillarIndex) => (
-          <div key={pillarIndex} className="mb-20">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5 }}
-              className="flex flex-col items-center text-center gap-4 mb-8 p-6 rounded-2xl card-gradient border border-border"
-            >
-              <div className="w-12 h-12 rounded-xl bg-primary/20 flex items-center justify-center">
-                <pillar.icon className="w-6 h-6 text-primary" />
-              </div>
-              <div>
-                <h3 className="font-display text-xl md:text-2xl font-bold text-foreground">
-                  {pillar.name}
-                </h3>
-                <p className="text-sm text-primary font-medium">{pillar.subtitle}</p>
-              </div>
-            </motion.div>
+        {/* MÓDULOS PREMIUM — separador */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="text-center mb-12"
+        >
+          <p className="text-xs font-bold uppercase tracking-[0.3em] text-amber-400/80 mb-3">
+            Ou comece por um módulo
+          </p>
+          <h3 className="font-display text-2xl md:text-3xl font-bold text-foreground">
+            Módulos avulsos com acesso imediato
+          </h3>
+          <p className="text-muted-foreground mt-3 max-w-xl mx-auto">
+            Cada módulo é um sistema completo dentro do seu pilar — escolha por onde sua
+            operação precisa começar.
+          </p>
+        </motion.div>
 
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center">
-              {pillar.modules.map((mod, modIndex) => (
-                <motion.div
-                  key={modIndex}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: modIndex * 0.05, duration: 0.4 }}
-                  className="w-full max-w-sm rounded-2xl p-6 card-gradient border border-border hover:border-primary/30 transition-all duration-300 flex flex-col text-center"
-                >
-                  <h4 className="font-display text-lg font-bold text-foreground mb-1">
-                    {mod.title}
-                  </h4>
-                  <p className="text-2xl font-bold text-gradient mb-4">{mod.price}</p>
-
-                  <ul className="space-y-2.5 mb-6 flex-1 text-left">
-                    {mod.features.map((feature, i) => (
-                      <li key={i} className="flex items-start gap-2">
-                        <Check className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
-                        <span className="text-sm text-muted-foreground">{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-
-                  <Button variant="cta" className="w-full" asChild>
-                    <a href={mod.link} target="_blank" rel="noopener noreferrer">
-                      Comprar Módulo
-                    </a>
-                  </Button>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        ))}
+        {/* MÓDULOS 1 e 2 PREMIUM */}
+        <div className="grid lg:grid-cols-2 gap-8 max-w-6xl mx-auto mb-20">
+          {premiumModules.map((mod, i) => (
+            <PremiumModuleCard key={i} module={mod} index={i} />
+          ))}
+        </div>
 
         {/* PILLAR 3 — BONUS ONLY */}
         <motion.div
