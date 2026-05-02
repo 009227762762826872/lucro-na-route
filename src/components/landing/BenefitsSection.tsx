@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
-import { Video, Wrench, Truck, Shield, Award, Mail, Calendar, Users, CreditCard, Inbox, KeyRound, Zap } from "lucide-react";
+import { BookOpen, Wrench, Truck, Shield, Award, Mail, Calendar, Users, CreditCard, Inbox, KeyRound, Zap } from "lucide-react";
 import benefitsImage from "@/assets/benefits-image.jpg";
 
 const courseContent = [
-  { icon: Video, title: "Videoaulas objetivas", description: "Conteúdo direto ao ponto, sem enrolação" },
+  { icon: BookOpen, title: "Conteúdos objetivos", description: "Material direto ao ponto, sem enrolação" },
   { icon: Truck, title: "Foco em transportadoras", description: "Operacional, comercial e administrativo" },
   { icon: Award, title: "+26 anos de prática", description: "Experiência real de Ederson e Dion" },
   { icon: Wrench, title: "Ferramentas práticas", description: "Cada módulo inclui materiais e ferramentas específicas para aplicar no dia a dia" },
