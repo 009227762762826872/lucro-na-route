@@ -62,7 +62,7 @@ export const Header = () => {
           <div className="hidden md:block">
             <Button variant="hero" size="default" asChild>
               <a
-                href="https://codigosdostransporteslucrativos1776911675993.carrinho.app/one-checkout/ocmdf/35665377"
+                href="https://pagar.vindi.com.br/9843e43757174fc07e8184fbfe4470da678013a5"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -107,7 +107,7 @@ export const Header = () => {
             ))}
             <Button variant="hero" size="default" asChild className="mt-2">
               <a
-                href="https://codigosdostransporteslucrativos1776911675993.carrinho.app/one-checkout/ocmdf/35665377"
+                href="https://pagar.vindi.com.br/9843e43757174fc07e8184fbfe4470da678013a5"
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => setIsMobileMenuOpen(false)}
