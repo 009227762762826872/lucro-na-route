@@ -57,7 +57,7 @@ export const CTASection = () => {
 
           <Button variant="hero" size="xl" asChild className="group">
             <a
-              href="https://codigosdostransporteslucrativos1776911675993.carrinho.app/one-checkout/ocmdf/35665377"
+              href="https://pagar.vindi.com.br/9843e43757174fc07e8184fbfe4470da678013a5"
               target="_blank"
               rel="noopener noreferrer"
             >

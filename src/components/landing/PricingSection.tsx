@@ -11,7 +11,7 @@ import {
 } from "lucide-react";
 
 const CHECKOUT_URL =
-  "https://codigosdostransporteslucrativos1776911675993.carrinho.app/one-checkout/ocmdf/35665377";
+  "https://pagar.vindi.com.br/9843e43757174fc07e8184fbfe4470da678013a5";
 
 interface PremiumModule {
   badge: string;
@@ -42,7 +42,7 @@ const premiumModules: PremiumModule[] = [
     ],
     price: "R$ 159,90",
     ctaLabel: "Quero esse módulo",
-    link: "https://codigosdostransporteslucrativos1776911675993.carrinho.app/one-checkout/ocmdf/35722903",
+    link: "https://pagar.vindi.com.br/7535339ee2852371e6d643717871533a89e65308",
   },
   {
     badge: "CONTROLE E LUCRO",
@@ -60,7 +60,7 @@ const premiumModules: PremiumModule[] = [
     ],
     price: "R$ 219,90",
     ctaLabel: "Quero esse módulo",
-    link: "https://codigosdostransporteslucrativos1776911675993.carrinho.app/one-checkout/ocmdf/35722921",
+    link: "https://pagar.vindi.com.br/fb81b0be2f8fe2b3b1166d136be098e87543dba8",
   },
 ];
 
