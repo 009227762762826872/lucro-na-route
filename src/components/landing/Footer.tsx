@@ -132,7 +132,7 @@ export const Footer = () => {
                       contexto e execução de cada aluno.
                     </p>
                     <p className="pt-4 border-t border-border">
-                      CNPJ: 12.265.025/0001-04
+                      Direitos autorais Transage LTDA
                     </p>
                   </div>
                 </ScrollArea>
@@ -183,7 +183,7 @@ export const Footer = () => {
                       o desempenho da página.
                     </p>
                     <p className="pt-4 border-t border-border">
-                      CNPJ: 12.265.025/0001-04 — Contato: ederson@transage.com.br
+                      Direitos autorais Transage LTDA — Contato: ederson@transage.com.br
                     </p>
                   </div>
                 </ScrollArea>
