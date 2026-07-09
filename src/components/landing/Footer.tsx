@@ -1,4 +1,4 @@
-import { Truck, TrendingUp, Mail, Phone } from "lucide-react";
+import { Truck, TrendingUp, Mail, Phone, Instagram } from "lucide-react";
 import {
   Dialog,
   DialogContent,
@@ -68,14 +68,21 @@ export const Footer = () => {
                 <Phone className="w-4 h-4" />
                 (62) 94263-3503
               </a>
+              <a href="https://www.instagram.com/ederson.dedordi" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors">
+                <Instagram className="w-4 h-4" />
+                @ederson.dedordi
+              </a>
             </div>
+            <p className="text-xs text-muted-foreground pt-2 border-t border-border/50 mt-2">
+              📩 Após a compra, o acesso é enviado automaticamente para o e-mail cadastrado no checkout.
+            </p>
           </div>
         </div>
 
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-border flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-sm text-muted-foreground text-center">
-            © {new Date().getFullYear()} Todos os direitos reservados — CNPJ: 12.265.025/0001-04
+            © {new Date().getFullYear()} Direitos autorais Transage LTDA — Todos os direitos reservados
           </p>
 
           <div className="flex items-center gap-6">
@@ -125,7 +132,7 @@ export const Footer = () => {
                       contexto e execução de cada aluno.
                     </p>
                     <p className="pt-4 border-t border-border">
-                      CNPJ: 12.265.025/0001-04
+                      Direitos autorais Transage LTDA
                     </p>
                   </div>
                 </ScrollArea>
@@ -176,7 +183,7 @@ export const Footer = () => {
                       o desempenho da página.
                     </p>
                     <p className="pt-4 border-t border-border">
-                      CNPJ: 12.265.025/0001-04 — Contato: ederson@transage.com.br
+                      Direitos autorais Transage LTDA — Contato: ederson@transage.com.br
                     </p>
                   </div>
                 </ScrollArea>
